@@ -29,12 +29,24 @@ class StringOperations {
         
     }
     
+    toTitleCase(){
+        return this.currentString
+                            .toLowerCase()
+                            .split(" ")
+                            .map((word)=> (word[0]?.toUpperCase() || "") + word.slice(1)
+                               )
+                               .join(" ")
+                            
+    }
+    
 }
 
-let myString = new StringOperations("Namaste");
-let myString2 = new StringOperations("MalayalaM");
+let myString = new StringOperations("namaste to india and my home  ");
+let myString2 = new StringOperations("f");
 
 console.log(myString.reverse1());
 console.log(myString.reverse2());
 console.log(myString.isPallindrome());
 console.log(myString2.isPallindrome());
+console.log(myString.toTitleCase());
+console.log(myString2.toTitleCase());
